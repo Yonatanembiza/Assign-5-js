@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript in Browser</title>
+</head>
+<body>
+    <script>
+       function maxOfTwo(input1, input2){
+            if(input1 > input2){
+                console.log(input1);
+            } else if(input1 < input2){
+                    console.log(input2);
+            } else {
+                    console.log(0);
+            }
+        }
+        maxOfTwo(-5, -3); //-3
+        maxOfTwo(5, 13); //13
+        function findMaxOfThree(num1, num2, num3) {
+            let max;
+            if(num1>num2){
+                max =  (num1>num3)?num1:num3;
+            }
+            else{
+                max = (num2 > num3) ? num2 : num3;
+            }
+            
+            console.log("The max of the three input numbers is: ", max);
+        }
+        findMaxOfThree(3, 2, 1);
+        
+        function checkIfVowel(input){
+            let vowels = ['a', 'e', 'i', 'o', 'u'];
+            console.log(vowels.includes(input))
+        }
+        checkIfVowel('i');
+        function sum(inputs){
+            let s = 0;
+            for(let i=0; i<inputs.length; i++){
+                s += inputs[i];
+            }
+            console.log("The sum is: ", s);
+        }
+        sum([4,6,7]);
+        function multiply(inputs){
+            let m = 1;
+            for(let i=0; i<inputs.length; i++){
+                m *= inputs[i];
+            }
+            console.log("The multiplication is: ", m);
+        }
+        multiply([4,6,7]);
+        function reverseStr(input){
+            let reversedString = '';
+            for(let i=input.length-1; i>=0; i--){
+                reversedString += input[i];
+            }
+            console.log("The reversed string is: ", reversedString);
+        }
+        reverseStr("jag tester");
+        function findLongestWordLength(input){
+            let longestWordLength = 0;
+            for (let i=0; i<input.length; ++i){
+                console.log(input[i]);
+                if(input[i].length > findLongestWordLength){
+                    longestWordLength = input[i].length;
+                }
+            }
+            console.log("The longest word has a length of: ", longestWordLength);
+        }
+        findLongestWordLength(["wer", "wert", "weree"]);
+    </script>
+</body>
+</html>

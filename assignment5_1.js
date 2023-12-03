@@ -9,3 +9,4 @@ function maxOfTwo(input1, input2){
         return 0;
     }
 }
+console.log(maxOfTwo(-5, -3)); //-3
